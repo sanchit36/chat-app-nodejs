@@ -89,6 +89,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/chat", function (req, res) {
+  res.sendFile(publicDirectoryPath + "/chat.html");
+});
+
 server.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}!`);
 });
